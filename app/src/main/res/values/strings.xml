@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AppSaludable</string>
+
+    //Texts MainActivity
+    <string name="text_btn_iniciar">Home</string>
+
+    //Texts MainActivity2
+    <string name="text_title_home">Bienvenido a AppSaludable</string>
+    <string name="text_nombre">Nombre: </string>
+    <string name="text_apellido">Apellido: </string>
+    <string name="text_email">Email: </string>
+    <string name="text_btn_guardar">Guardar</string>
+    <string name="text_btn_siguiente">Siguiente</string>
+
+    //Texts MainActivity3
+    <string name="text_imc">Calcula tu IMC</string>
+    <string name="text_diligencia">Por favor diligencia los siguientes datos: </string>
+
+    <string name="text_peso">Peso (kg): </string>
+    <string name="text_estatura">Estatura (m): </string>
+    <string name="text_btn_calcular">Calcular</string>
+    <string name="text_btn_volver">Volver</string>
+
+
+</resources>
