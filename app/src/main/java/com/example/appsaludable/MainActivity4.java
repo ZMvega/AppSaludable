@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class MainActivity4 extends AppCompatActivity {
     private TextView textResultado;
-    private ImageView imageTablaRango;
     private Button btnSiguiente, btnVolver2;
 
 
@@ -24,6 +23,7 @@ public class MainActivity4 extends AppCompatActivity {
         textResultado =(TextView) findViewById(R.id.textResultado);
         btnSiguiente =(Button) findViewById(R.id.btnSiguiente);
         btnVolver2 =(Button) findViewById(R.id.btnVolver2);
+
 
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
