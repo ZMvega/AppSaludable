@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity3 extends AppCompatActivity {
-    public TextView textTraido, textPeso, textEstatura;
-    public Button btnCalcular, btnVolver;
+    private TextView textTraido, textPeso, textEstatura;
+    private Button btnCalcular, btnVolver;
+    private EditText editTextPeso, editTextEstatura;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class MainActivity3 extends AppCompatActivity {
         textPeso=(TextView) findViewById(R.id.textPeso);
         textEstatura =(TextView) findViewById(R.id.textEstatura);
         textTraido=(TextView) findViewById(R.id.textTraido);
+        editTextPeso=(EditText) findViewById(R.id.editTextPeso);
+        editTextEstatura=(EditText) findViewById(R.id.editTextEstatura);
 
         textTraido=(TextView) findViewById(R.id.textTraido);
         Intent intent2= getIntent();
@@ -31,7 +36,12 @@ public class MainActivity3 extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent= new Intent(getApplicationContext(),MainActivity4.class);
+                double peso= Double.parseDouble(editTextPeso.getText().toString().trim());
+                double estatura= Double.parseDouble(editTextEstatura.getText().toString().trim());
+                double resultado= peso/(estatura*estatura/(100*100));
+                intent.putExtra("resultado", resultado);
+                Toast.makeText(getApplicationContext(),String.valueOf(resultado),Toast.LENGTH_LONG).show();
                 startActivity(intent);
             }
         });

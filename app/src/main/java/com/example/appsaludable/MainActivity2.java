@@ -31,7 +31,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(getApplicationContext(),MainActivity3.class);
-                intent.putExtra("title", editTextNombre.getText().toString() + editTextApellido.getText().toString());
+                intent.putExtra("title", editTextNombre.getText().toString() + " " +editTextApellido.getText().toString());
                 startActivity(intent);
             }
         });

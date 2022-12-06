@@ -21,5 +21,14 @@
     <string name="text_btn_calcular">Calcular</string>
     <string name="text_btn_volver">Volver</string>
 
+    //Texts MainActivity4
+    <string name="text_imc_resultado">Tu IMC es</string>
+    <string name="text_imc_descripcion">De acuerdo a tu resultado puedes mirar en la tabla de abajo a que rango perteneces, luego da click en continuar</string>
+    <string name="text_btn_continuar">Continuar</string>
+    <string name="text_btn_volver2">Volver</string>
+
+    //Texts MainActivity5
+    <string name="text_productos">Productos</string>
+
 
 </resources>
