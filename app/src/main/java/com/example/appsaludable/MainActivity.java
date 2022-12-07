@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btnIniciar;
+    private Button btnIniciar, btnProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnIniciar =(Button) findViewById(R.id.btnIniciar);
+        btnProductos =(Button) findViewById(R.id.btnProductos);
 
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
+        btnProductos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Catalogo.class);
                 startActivity(intent);
             }
         });

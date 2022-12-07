@@ -36,7 +36,7 @@ public class MainActivity4 extends AppCompatActivity {
         btnVolver2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity4.class);
+                Intent intent= new Intent(getApplicationContext(),MainActivity3.class);
                 startActivity(intent);
             }
         });

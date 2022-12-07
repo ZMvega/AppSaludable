@@ -21,5 +21,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_btn_iniciar" />
+
+        <Button
+            android:id="@+id/btnProductos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_btn_productos" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

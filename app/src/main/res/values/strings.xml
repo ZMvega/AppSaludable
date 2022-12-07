@@ -3,6 +3,7 @@
 
     //Texts MainActivity
     <string name="text_btn_iniciar">Home</string>
+    <string name="text_btn_productos">Productos</string>
 
     //Texts MainActivity2
     <string name="text_title_home">Bienvenido a AppSaludable</string>
