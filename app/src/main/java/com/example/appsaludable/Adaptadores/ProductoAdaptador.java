@@ -2,6 +2,8 @@ package com.example.appsaludable.Adaptadores;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,8 +68,10 @@ public class ProductoAdaptador extends BaseAdapter {
 
         Productos productos= arrayProductos.get(i);
 
+        //byte[] image = productos.getImagen();
+        //Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
 
-        imageProducto.setImageResource(productos.getImagen());
+        //imageProducto.setImageBitmap(bitmap);
         textNombreProducto.setText(productos.getNombre());
         textDescripcionProducto.setText(productos.getDescripción());
         textPrecioProducto.setText(String.valueOf(productos.getPrecio()));
@@ -79,7 +83,7 @@ public class ProductoAdaptador extends BaseAdapter {
                 intent.putExtra("nombre", productos.getNombre());
                 intent.putExtra("descripcion", productos.getDescripción());
                 intent.putExtra("precio", productos.getPrecio());
-                intent.putExtra("image", productos.getImagen());
+                //intent.putExtra("image", productos.getImagen());
                 context.startActivity(intent);
                 //Toast.makeText(context.getApplicationContext(), "Hola "+productos.getNombre(), Toast.LENGTH_SHORT).show();
             }

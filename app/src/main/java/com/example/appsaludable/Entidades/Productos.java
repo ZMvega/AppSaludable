@@ -1,35 +1,51 @@
 package com.example.appsaludable.Entidades;
 
+import java.util.UUID;
+
 public class Productos {
-    private int id;
-    private int imagen;
+    private String id;
+    private byte[] imagen;
     private String nombre;
     private String descripción;
     private int precio;
 
     //Se generan los constructores - Segundo Paso
-    public Productos(int id, int imagen, String nombre, String descripción, int precio) {
-        this.id = id;
+    public Productos(String nombre, String descripción, int precio, byte[] imagen) {
+        this.id = UUID.randomUUID().toString();
         this.imagen = imagen;
         this.nombre = nombre;
         this.descripción = descripción;
         this.precio = precio;
     }
 
-    //Se generaron primero los getters and setters
-    public int getId() {
-        return id;
+    public Productos(String id, String nombre, String descripción, int precio, byte[] imagen) {
+        this.id = UUID.randomUUID().toString();
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.descripción = descripción;
+        this.precio = precio;
     }
 
-    public void setId(int id) {
+    public Productos(String id, String nombre, String descripción, int precio) {
+        this.id = UUID.randomUUID().toString();
+        this.nombre = nombre;
+        this.descripción = descripción;
+        this.precio = precio;
+    }
+
+    //Se generaron primero los getters and setters
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getImagen() {
+    public byte[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 
