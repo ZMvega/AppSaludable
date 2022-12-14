@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityHome extends AppCompatActivity {
     private Button btnIniciar, btnProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_home);
 
         btnIniciar =(Button) findViewById(R.id.btnIniciar);
         btnProductos =(Button) findViewById(R.id.btnProductos);
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent= new Intent(getApplicationContext(), MainActivityForm.class);
                 startActivity(intent);
             }
         });

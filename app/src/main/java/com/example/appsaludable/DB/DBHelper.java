@@ -20,11 +20,11 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE PRODUCTS("+
-                "id VARCHAR PRIMARY KEY AUTOINCREMENT, "+
-                "name VARCHAR, "+
-                "description VARCHAR, "+
-                "price VARCHAR, "+
-                "image BLOB"+
+                "id TEXT PRIMARY KEY, "+
+                "name TEXT, "+
+                "description TEXT, "+
+                "price TEXT, "+
+                "image TEXT"+
                 ")");
     }
 
@@ -37,12 +37,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public void insertProduct(Productos producto){
         String sql = "INSERT INTO PRODUCTS VALUES(?, ?, ?, ?, ?)";
         SQLiteStatement statement = sqLiteDataBase.compileStatement(sql);
+        //statement.clearBindings();
 
-        statement.bindString(0, producto.getId());
-        statement.bindString(1, producto.getNombre());
-        statement.bindString(2, producto.getDescripción());
-        statement.bindString(3, String.valueOf(producto.getPrecio()));
-        statement.bindBlob(4, producto.getImagen());
+        statement.bindString(1, producto.getId());
+        statement.bindString(2, producto.getNombre());
+        statement.bindString(3, producto.getDescripción());
+        statement.bindString(4, String.valueOf(producto.getPrecio()));
+        statement.bindString(5, producto.getImagen());
 
         statement.executeInsert();
     }

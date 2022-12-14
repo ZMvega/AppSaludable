@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivityIMC extends AppCompatActivity {
     private TextView textTraido, textPeso, textEstatura;
     private Button btnCalcular, btnVolver;
     private EditText editTextPeso, editTextEstatura;
@@ -18,7 +18,7 @@ public class MainActivity3 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_main_imc);
 
         btnCalcular =(Button) findViewById(R.id.btnCalcular);
         btnVolver =(Button) findViewById(R.id.btnVolver);
@@ -36,7 +36,7 @@ public class MainActivity3 extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity4.class);
+                Intent intent= new Intent(getApplicationContext(), MainActivityResultIMC.class);
                 double peso= Double.parseDouble(editTextPeso.getText().toString().trim());
                 double estatura= Double.parseDouble(editTextEstatura.getText().toString().trim());
                 double resultado= peso/(estatura*estatura/(100*100));
@@ -51,7 +51,7 @@ public class MainActivity3 extends AppCompatActivity {
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity2.class);
+                Intent intent= new Intent(getApplicationContext(), MainActivityForm.class);
                 startActivity(intent);
             }
         });

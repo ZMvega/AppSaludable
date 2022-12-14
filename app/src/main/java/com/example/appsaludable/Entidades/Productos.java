@@ -4,13 +4,13 @@ import java.util.UUID;
 
 public class Productos {
     private String id;
-    private byte[] imagen;
+    private String imagen;
     private String nombre;
     private String descripción;
     private int precio;
 
     //Se generan los constructores - Segundo Paso
-    public Productos(String nombre, String descripción, int precio, byte[] imagen) {
+    public Productos(String nombre, String descripción, int precio, String imagen) {
         this.id = UUID.randomUUID().toString();
         this.imagen = imagen;
         this.nombre = nombre;
@@ -18,7 +18,7 @@ public class Productos {
         this.precio = precio;
     }
 
-    public Productos(String id, String nombre, String descripción, int precio, byte[] imagen) {
+    public Productos(String id, String nombre, String descripción, int precio, String imagen) {
         this.id = UUID.randomUUID().toString();
         this.imagen = imagen;
         this.nombre = nombre;
@@ -33,6 +33,13 @@ public class Productos {
         this.precio = precio;
     }
 
+    public Productos(String nombre, String descripción, int precio) {
+        this.id = UUID.randomUUID().toString();
+        this.nombre = nombre;
+        this.descripción = descripción;
+        this.precio = precio;
+    }
+
     //Se generaron primero los getters and setters
     public String getId() {
         return id;
@@ -41,11 +48,11 @@ public class Productos {
         this.id = id;
     }
 
-    public byte[] getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
