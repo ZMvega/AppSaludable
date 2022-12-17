@@ -6,7 +6,7 @@
     android:gravity="center"
     android:background="@drawable/skin"
     android:orientation="horizontal"
-    tools:context=".MainActivity4">
+    tools:context=".MainActivityResultIMC">
 
     <LinearLayout
         android:layout_width="match_parent"

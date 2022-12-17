@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivityForm extends AppCompatActivity {
     private Button btnGuardar, btnSiguiente;
     private TextView textNombre, textApellido, textEmail;
     private EditText editTextNombre, editTextApellido;
@@ -17,7 +17,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main_form);
 
         btnGuardar =(Button) findViewById(R.id.btnGuardar);
         btnSiguiente =(Button) findViewById(R.id.btnSiguiente);
@@ -30,7 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent= new Intent(getApplicationContext(), MainActivityIMC.class);
                 intent.putExtra("title", editTextNombre.getText().toString() + " " +editTextApellido.getText().toString());
                 startActivity(intent);
             }
@@ -41,7 +41,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(),MainActivity3.class);
+                Intent intent= new Intent(getApplicationContext(), MainActivityIMC.class);
                 startActivity(intent);
             }
         });

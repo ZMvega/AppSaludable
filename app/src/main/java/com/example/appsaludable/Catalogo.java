@@ -53,7 +53,7 @@ public class Catalogo extends AppCompatActivity {
             dbHelper = new DBHelper(this);
             dbFirebase = new DBFirebase();
             productService = new ProductService();
-            arrayProductos = productService.cursorArrayList(dbHelper.getProducts());
+            arrayProductos = productService.cursorToArrayList(dbHelper.getProducts());
 
         }catch (Exception e){
             Log.e("DB Get", e.toString());

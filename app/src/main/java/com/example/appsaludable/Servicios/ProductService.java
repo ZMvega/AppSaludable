@@ -26,7 +26,7 @@ public class ProductService {
         return byteArray;
     }*/
 
-    public ArrayList<Productos> cursorArrayList(Cursor cursor){
+    public ArrayList<Productos> cursorToArrayList(Cursor cursor){
         ArrayList<Productos> list = new ArrayList<>();
         if (cursor.getCount() != 0){
             while (cursor.moveToNext()){
@@ -35,7 +35,7 @@ public class ProductService {
                         cursor.getString(1),
                         cursor.getString(2),
                         Integer.parseInt(cursor.getString(3)),
-                        cursor.getBlob(4)
+                        cursor.getString(4)
                 );
                 list.add(productos);
             }

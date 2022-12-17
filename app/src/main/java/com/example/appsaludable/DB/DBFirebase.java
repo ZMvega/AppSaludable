@@ -38,39 +38,12 @@ public class DBFirebase {
         product.put("name", producto.getNombre());
         product.put("description", producto.getDescripción());
         product.put("price", producto.getPrecio());
+        product.put("image", producto.getImagen());
 
-        db.collection("products")
-                .add(product)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error adding document", e);
-                    }
-                });
+        db.collection("products").add(product);
     }
 
     public void getProducts(ProductoAdaptador productoAdaptador, ArrayList<Productos> list){
-        db.collection("products")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-
         //LEER DATOS
         db.collection("products")
                 .get()
@@ -83,7 +56,8 @@ public class DBFirebase {
                                         document.getData().get("id").toString(),
                                         document.getData().get("name").toString(),
                                         document.getData().get("description").toString(),
-                                        Integer.parseInt(document.getData().get("price").toString())
+                                        Integer.parseInt(document.getData().get("price").toString()),
+                                        document.getData().get("image").toString()
                                 );
                                 list.add(productos);
                             }
