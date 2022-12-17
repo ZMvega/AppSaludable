@@ -31,5 +31,12 @@
     //Texts MainActivity5
     <string name="text_productos">Productos</string>
 
+    //Texts ProductForm
+    <string name="product_form_title">PRODUCTOS</string>
+    <string name="product_form_name">Nombre:</string>
+    <string name="product_form_description">Descripción:</string>
+    <string name="product_form_price">Precio:</string>
+    <string name="product_form_btnRegistro">Registrar</string>
+
 
 </resources>
