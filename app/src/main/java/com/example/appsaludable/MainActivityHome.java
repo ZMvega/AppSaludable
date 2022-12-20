@@ -21,7 +21,7 @@ public class MainActivityHome extends AppCompatActivity {
         btnIniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(getApplicationContext(), MainActivityForm.class);
+                Intent intent= new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
             }
         });
@@ -29,7 +29,7 @@ public class MainActivityHome extends AppCompatActivity {
         btnProductos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Catalogo.class);
+                Intent intent = new Intent(getApplicationContext(), Maps.class);
                 startActivity(intent);
             }
         });
