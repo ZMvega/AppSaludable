@@ -75,8 +75,9 @@ public class ProductoAdaptador extends BaseAdapter {
         textNombreProducto.setText(productos.getNombre());
         textDescripcionProducto.setText(productos.getDescripción());
         textPrecioProducto.setText(String.valueOf(productos.getPrecio()));
-
         imageProducto.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(context.getApplicationContext(), Info.class);

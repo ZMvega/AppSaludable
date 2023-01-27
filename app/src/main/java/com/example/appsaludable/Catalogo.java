@@ -87,8 +87,6 @@ public class Catalogo extends AppCompatActivity {
         arrayProductos.add(producto10);
 
         int productosItem = R.layout.productos_item;*/
-
-
     }
 
     @Override
